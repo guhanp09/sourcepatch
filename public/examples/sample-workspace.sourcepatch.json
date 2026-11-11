@@ -1,0 +1,190 @@
+{
+  "schemaVersion": 1,
+  "id": "sourcepatch-sample-workspace",
+  "name": "Research methods notebook",
+  "sample": true,
+  "sources": [
+    {
+      "id": "source-experiment",
+      "title": "Experiment handbook",
+      "archived": false,
+      "versions": [
+        {
+          "id": "aa9d746f-01ab-4f72-b17a-0bb8ee936c03",
+          "body": "Random assignment helps distribute confounding factors across treatment and control groups. Correlation alone does not establish causation.\n\nThe workshop exercise uses a sample of 60 participants, split equally between treatment and control.\n\nFor the workshop exercise, use a significance threshold of 0.05. Report the effect size alongside the p-value.",
+          "digest": "75e828f34740239dd1b2265aa94fb9be921edabe25c262a87928f965127a6de2",
+          "createdAt": "2026-11-11T19:34:41.841Z"
+        },
+        {
+          "id": "a9ee18e1-3eee-438b-88a1-26c763ab7715",
+          "body": "Random assignment helps distribute confounding factors across treatment and control groups. Correlation alone does not establish causation.\n\nThe workshop exercise uses a sample of 80 participants, split equally between treatment and control.\n\nFor the workshop exercise, use a significance threshold of 0.01. Report the effect size alongside the p-value.\n\nThe exercise is illustrative. Its convenience sample does not support generalizing results to the wider student population.",
+          "digest": "d03dd00ba8a417cd5132a3f556e6440f4cb85466f3dcf150e7e92ef4b6b22821",
+          "createdAt": "2026-11-11T19:34:41.843Z"
+        }
+      ]
+    },
+    {
+      "id": "source-schedule",
+      "title": "Workshop schedule",
+      "archived": false,
+      "versions": [
+        {
+          "id": "6d5d8f58-4f14-4e15-9b35-cfce3ed66b91",
+          "body": "The research workshop takes place on 14 November 2026 in Room 301. Bring the completed experiment worksheet.\n\nOffice hours are on Fridays from 15:00 to 16:00. Students can bring questions about the reading material.",
+          "digest": "30881862673f57fead24faf1dbd4f86dfe023a2aee572644d733165626039076",
+          "createdAt": "2026-11-11T19:34:41.844Z"
+        },
+        {
+          "id": "956fff90-4383-4614-b82c-75093d98fc58",
+          "body": "The research workshop takes place on 21 November 2026 in Room 204. Bring the completed experiment worksheet.\n\nOffice hours are on Fridays from 15:00 to 16:00. Students can bring questions about the reading material.",
+          "digest": "9dd8227e4418f3269b1dada7427b61ce1703156ccd411f92dae07da611491f2c",
+          "createdAt": "2026-11-11T19:34:41.844Z"
+        }
+      ]
+    },
+    {
+      "id": "source-writing",
+      "title": "Scientific writing guide",
+      "archived": false,
+      "versions": [
+        {
+          "id": "ec77b776-64c5-4019-9df8-c450a14cb666",
+          "body": "Report units alongside numerical quantities. Label graph axes and distinguish absolute changes from percentage changes.\n\nCite original sources when explaining a research finding. Separate the evidence from your interpretation.",
+          "digest": "e5e4814f798edba85bbb244c3e6874fbb635fb97a0e27418f3ee9419a875a7ae",
+          "createdAt": "2026-11-11T19:34:41.844Z"
+        }
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "id": "output-experiment",
+      "title": "Experiment revision guide",
+      "origin": "Sample",
+      "createdAt": "2026-11-10T09:00:00.000Z",
+      "passages": [
+        {
+          "id": "passage-sample",
+          "text": "Plan for 60 participants: 30 in the treatment group and 30 in the control group.",
+          "evidence": [
+            {
+              "sourceId": "source-experiment",
+              "versionId": "aa9d746f-01ab-4f72-b17a-0bb8ee936c03",
+              "quote": "The workshop exercise uses a sample of 60 participants, split equally between treatment and control.",
+              "confirmed": true
+            }
+          ]
+        },
+        {
+          "id": "passage-threshold",
+          "text": "Use a significance threshold of 0.05 and report the effect size alongside the p-value.",
+          "evidence": [
+            {
+              "sourceId": "source-experiment",
+              "versionId": "aa9d746f-01ab-4f72-b17a-0bb8ee936c03",
+              "quote": "For the workshop exercise, use a significance threshold of 0.05. Report the effect size alongside the p-value.",
+              "confirmed": true
+            }
+          ]
+        },
+        {
+          "id": "passage-random",
+          "text": "Random assignment helps balance confounding factors. A correlation is not enough to establish causation.",
+          "evidence": [
+            {
+              "sourceId": "source-experiment",
+              "versionId": "aa9d746f-01ab-4f72-b17a-0bb8ee936c03",
+              "quote": "Random assignment helps distribute confounding factors across treatment and control groups. Correlation alone does not establish causation.",
+              "confirmed": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "output-workshop",
+      "title": "Workshop preparation note",
+      "origin": "Sample",
+      "createdAt": "2026-11-10T09:10:00.000Z",
+      "passages": [
+        {
+          "id": "passage-date",
+          "text": "Attend the research workshop on 14 November 2026 in Room 301, with the experiment worksheet completed.",
+          "evidence": [
+            {
+              "sourceId": "source-schedule",
+              "versionId": "6d5d8f58-4f14-4e15-9b35-cfce3ed66b91",
+              "quote": "The research workshop takes place on 14 November 2026 in Room 301. Bring the completed experiment worksheet.",
+              "confirmed": true
+            }
+          ]
+        },
+        {
+          "id": "passage-hours",
+          "text": "Bring reading questions to Friday office hours, from 15:00 to 16:00.",
+          "evidence": [
+            {
+              "sourceId": "source-schedule",
+              "versionId": "6d5d8f58-4f14-4e15-9b35-cfce3ed66b91",
+              "quote": "Office hours are on Fridays from 15:00 to 16:00. Students can bring questions about the reading material.",
+              "confirmed": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "output-writing",
+      "title": "Writing checklist",
+      "origin": "Sample",
+      "createdAt": "2026-11-10T09:20:00.000Z",
+      "passages": [
+        {
+          "id": "passage-units",
+          "text": "Include units, label graph axes, and distinguish absolute changes from percentage changes.",
+          "evidence": [
+            {
+              "sourceId": "source-writing",
+              "versionId": "ec77b776-64c5-4019-9df8-c450a14cb666",
+              "quote": "Report units alongside numerical quantities. Label graph axes and distinguish absolute changes from percentage changes.",
+              "confirmed": true
+            }
+          ]
+        },
+        {
+          "id": "passage-citations",
+          "text": "Cite original sources and separate the evidence from your interpretation.",
+          "evidence": [
+            {
+              "sourceId": "source-writing",
+              "versionId": "ec77b776-64c5-4019-9df8-c450a14cb666",
+              "quote": "Cite original sources when explaining a research finding. Separate the evidence from your interpretation.",
+              "confirmed": true
+            }
+          ]
+        },
+        {
+          "id": "passage-unlinked",
+          "text": "Every study should use the same sample size, regardless of its research question.",
+          "evidence": []
+        }
+      ]
+    }
+  ],
+  "audit": [
+    {
+      "id": "audit-demo-schedule",
+      "at": "2026-11-12T08:10:00.000Z",
+      "action": "source-revised",
+      "subject": "Workshop schedule",
+      "detail": "Sample revision changes the workshop date and room. Snapshot 9dd8227e4418."
+    },
+    {
+      "id": "audit-demo-experiment",
+      "at": "2026-11-12T08:00:00.000Z",
+      "action": "source-revised",
+      "subject": "Experiment handbook",
+      "detail": "Sample revision changes the participant count and threshold, and adds a limitation."
+    }
+  ]
+}

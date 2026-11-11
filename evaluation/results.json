@@ -1,0 +1,388 @@
+{
+  "dataset": "SourcePatch authored regression scenarios v1",
+  "sampleSize": 26,
+  "statusCorrect": 26,
+  "statusTotal": 26,
+  "results": [
+    {
+      "method": "Leave output unchanged",
+      "truePositive": 0,
+      "falsePositive": 0,
+      "falseNegative": 20,
+      "trueNegative": 6,
+      "precision": null,
+      "recall": 0,
+      "alerts": 0
+    },
+    {
+      "method": "Invalidate all on any source change",
+      "truePositive": 20,
+      "falsePositive": 2,
+      "falseNegative": 0,
+      "trueNegative": 4,
+      "precision": 0.9090909090909091,
+      "recall": 1,
+      "alerts": 22
+    },
+    {
+      "method": "Check cited excerpt only",
+      "truePositive": 14,
+      "falsePositive": 0,
+      "falseNegative": 6,
+      "trueNegative": 6,
+      "precision": 1,
+      "recall": 0.7,
+      "alerts": 14
+    },
+    {
+      "method": "SourcePatch",
+      "truePositive": 20,
+      "falsePositive": 0,
+      "falseNegative": 0,
+      "trueNegative": 6,
+      "precision": 1,
+      "recall": 1,
+      "alerts": 20
+    }
+  ],
+  "cases": [
+    {
+      "id": "quantity",
+      "category": "changed",
+      "expected": "changed",
+      "actual": "changed",
+      "reason": "A quantity in the cited evidence changes.",
+      "predictions": {
+        "Leave output unchanged": false,
+        "Invalidate all on any source change": true,
+        "Check cited excerpt only": true,
+        "SourcePatch": true
+      }
+    },
+    {
+      "id": "date",
+      "category": "changed",
+      "expected": "changed",
+      "actual": "changed",
+      "reason": "A scheduled date changes.",
+      "predictions": {
+        "Leave output unchanged": false,
+        "Invalidate all on any source change": true,
+        "Check cited excerpt only": true,
+        "SourcePatch": true
+      }
+    },
+    {
+      "id": "negation",
+      "category": "changed",
+      "expected": "changed",
+      "actual": "changed",
+      "reason": "Negation changes a statement even with high lexical overlap.",
+      "predictions": {
+        "Leave output unchanged": false,
+        "Invalidate all on any source change": true,
+        "Check cited excerpt only": true,
+        "SourcePatch": true
+      }
+    },
+    {
+      "id": "unit",
+      "category": "changed",
+      "expected": "changed",
+      "actual": "changed",
+      "reason": "The number is unchanged but its unit changes.",
+      "predictions": {
+        "Leave output unchanged": false,
+        "Invalidate all on any source change": true,
+        "Check cited excerpt only": true,
+        "SourcePatch": true
+      }
+    },
+    {
+      "id": "threshold",
+      "category": "changed",
+      "expected": "changed",
+      "actual": "changed",
+      "reason": "A numerical threshold changes.",
+      "predictions": {
+        "Leave output unchanged": false,
+        "Invalidate all on any source change": true,
+        "Check cited excerpt only": true,
+        "SourcePatch": true
+      }
+    },
+    {
+      "id": "inequality",
+      "category": "changed",
+      "expected": "changed",
+      "actual": "changed",
+      "reason": "A mathematical operator changes.",
+      "predictions": {
+        "Leave output unchanged": false,
+        "Invalidate all on any source change": true,
+        "Check cited excerpt only": true,
+        "SourcePatch": true
+      }
+    },
+    {
+      "id": "deleted-evidence",
+      "category": "changed",
+      "expected": "changed",
+      "actual": "changed",
+      "reason": "The supporting passage is removed.",
+      "predictions": {
+        "Leave output unchanged": false,
+        "Invalidate all on any source change": true,
+        "Check cited excerpt only": true,
+        "SourcePatch": true
+      }
+    },
+    {
+      "id": "scope-change",
+      "category": "changed",
+      "expected": "changed",
+      "actual": "changed",
+      "reason": "A qualification narrows the claim's scope.",
+      "predictions": {
+        "Leave output unchanged": false,
+        "Invalidate all on any source change": true,
+        "Check cited excerpt only": true,
+        "SourcePatch": true
+      }
+    },
+    {
+      "id": "punctuation",
+      "category": "changed",
+      "expected": "changed",
+      "actual": "changed",
+      "reason": "Punctuation carries mathematical meaning and cannot be normalized away.",
+      "predictions": {
+        "Leave output unchanged": false,
+        "Invalidate all on any source change": true,
+        "Check cited excerpt only": true,
+        "SourcePatch": true
+      }
+    },
+    {
+      "id": "code-indentation",
+      "category": "changed",
+      "expected": "changed",
+      "actual": "changed",
+      "reason": "Internal indentation is preserved because it can affect meaning.",
+      "predictions": {
+        "Leave output unchanged": false,
+        "Invalidate all on any source change": true,
+        "Check cited excerpt only": true,
+        "SourcePatch": true
+      }
+    },
+    {
+      "id": "new-exception",
+      "category": "context",
+      "expected": "context",
+      "actual": "context",
+      "reason": "The quote survives but a new exception may invalidate its use.",
+      "predictions": {
+        "Leave output unchanged": false,
+        "Invalidate all on any source change": true,
+        "Check cited excerpt only": false,
+        "SourcePatch": true
+      }
+    },
+    {
+      "id": "new-limitation",
+      "category": "context",
+      "expected": "context",
+      "actual": "context",
+      "reason": "A new limitation changes how unchanged evidence should be interpreted.",
+      "predictions": {
+        "Leave output unchanged": false,
+        "Invalidate all on any source change": true,
+        "Check cited excerpt only": false,
+        "SourcePatch": true
+      }
+    },
+    {
+      "id": "neighbor-changed",
+      "category": "context",
+      "expected": "context",
+      "actual": "context",
+      "reason": "Changed neighboring content is conservatively surfaced for review.",
+      "predictions": {
+        "Leave output unchanged": false,
+        "Invalidate all on any source change": true,
+        "Check cited excerpt only": false,
+        "SourcePatch": true
+      }
+    },
+    {
+      "id": "source-reordered",
+      "category": "context",
+      "expected": "context",
+      "actual": "context",
+      "reason": "Reordering is treated as context change, not assumed harmless.",
+      "predictions": {
+        "Leave output unchanged": false,
+        "Invalidate all on any source change": true,
+        "Check cited excerpt only": false,
+        "SourcePatch": true
+      }
+    },
+    {
+      "id": "heading-change",
+      "category": "context",
+      "expected": "context",
+      "actual": "context",
+      "reason": "A changed heading may change interpretation or status.",
+      "predictions": {
+        "Leave output unchanged": false,
+        "Invalidate all on any source change": true,
+        "Check cited excerpt only": false,
+        "SourcePatch": true
+      }
+    },
+    {
+      "id": "footnote-added",
+      "category": "context",
+      "expected": "context",
+      "actual": "context",
+      "reason": "A new measurement condition can qualify an unchanged claim.",
+      "predictions": {
+        "Leave output unchanged": false,
+        "Invalidate all on any source change": true,
+        "Check cited excerpt only": false,
+        "SourcePatch": true
+      }
+    },
+    {
+      "id": "unchanged",
+      "category": "current",
+      "expected": "current",
+      "actual": "current",
+      "reason": "The linked source did not change.",
+      "predictions": {
+        "Leave output unchanged": false,
+        "Invalidate all on any source change": false,
+        "Check cited excerpt only": false,
+        "SourcePatch": false
+      }
+    },
+    {
+      "id": "line-endings",
+      "category": "current",
+      "expected": "current",
+      "actual": "current",
+      "reason": "CRLF and LF line endings are equivalent in the text workflow.",
+      "predictions": {
+        "Leave output unchanged": false,
+        "Invalidate all on any source change": false,
+        "Check cited excerpt only": false,
+        "SourcePatch": false
+      }
+    },
+    {
+      "id": "unicode-canonical",
+      "category": "current",
+      "expected": "current",
+      "actual": "current",
+      "reason": "Canonical Unicode encoding differences are normalized.",
+      "predictions": {
+        "Leave output unchanged": false,
+        "Invalidate all on any source change": false,
+        "Check cited excerpt only": false,
+        "SourcePatch": false
+      }
+    },
+    {
+      "id": "outer-space",
+      "category": "current",
+      "expected": "current",
+      "actual": "current",
+      "reason": "Outer whitespace does not change this anchored text.",
+      "predictions": {
+        "Leave output unchanged": false,
+        "Invalidate all on any source change": false,
+        "Check cited excerpt only": false,
+        "SourcePatch": false
+      }
+    },
+    {
+      "id": "unrelated-source",
+      "category": "current",
+      "expected": "current",
+      "actual": "current",
+      "reason": "An unrelated source revision should not invalidate this passage.",
+      "predictions": {
+        "Leave output unchanged": false,
+        "Invalidate all on any source change": true,
+        "Check cited excerpt only": false,
+        "SourcePatch": false
+      }
+    },
+    {
+      "id": "unrelated-schedule",
+      "category": "current",
+      "expected": "current",
+      "actual": "current",
+      "reason": "An unrelated schedule revision should not invalidate a writing note.",
+      "predictions": {
+        "Leave output unchanged": false,
+        "Invalidate all on any source change": true,
+        "Check cited excerpt only": false,
+        "SourcePatch": false
+      }
+    },
+    {
+      "id": "unconfirmed-match",
+      "category": "unlinked",
+      "expected": "unlinked",
+      "actual": "unlinked",
+      "reason": "Even an exact suggested match requires human confirmation.",
+      "predictions": {
+        "Leave output unchanged": false,
+        "Invalidate all on any source change": true,
+        "Check cited excerpt only": true,
+        "SourcePatch": true
+      }
+    },
+    {
+      "id": "no-link",
+      "category": "unlinked",
+      "expected": "unlinked",
+      "actual": "unlinked",
+      "reason": "An unlinked claim is not marked current.",
+      "predictions": {
+        "Leave output unchanged": false,
+        "Invalidate all on any source change": true,
+        "Check cited excerpt only": true,
+        "SourcePatch": true
+      }
+    },
+    {
+      "id": "archived-source",
+      "category": "missing",
+      "expected": "missing",
+      "actual": "missing",
+      "reason": "Archived sources must not keep a passage silently current.",
+      "predictions": {
+        "Leave output unchanged": false,
+        "Invalidate all on any source change": true,
+        "Check cited excerpt only": true,
+        "SourcePatch": true
+      }
+    },
+    {
+      "id": "missing-source",
+      "category": "missing",
+      "expected": "missing",
+      "actual": "missing",
+      "reason": "A missing dependency is a blocking review condition.",
+      "predictions": {
+        "Leave output unchanged": false,
+        "Invalidate all on any source change": true,
+        "Check cited excerpt only": true,
+        "SourcePatch": true
+      }
+    }
+  ]
+}

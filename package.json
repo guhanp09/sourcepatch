@@ -1,0 +1,43 @@
+{
+  "name": "sourcepatch",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Local-first freshness review for exported NotebookLM outputs, with source provenance and human-approved corrections.",
+  "type": "module",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:e2e": "playwright test",
+    "evaluate": "tsx evaluation/run.ts",
+    "review:gemini": "tsx scripts/gemini-review.ts",
+    "check": "npm run test && npm run evaluate && npm run build",
+    "format": "prettier --write src tests scripts evaluation/*.ts *.ts *.json"
+  },
+  "dependencies": {
+    "@fontsource-variable/dm-sans": "5.3.0",
+    "diff": "9.0.0",
+    "lucide-react": "1.72.0",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.14.0",
+    "@playwright/test": "1.65.0",
+    "@types/node": "26.6.6",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@vitejs/plugin-react": "6.3.0",
+    "prettier": "3.10.0",
+    "tsx": "4.23.15",
+    "typescript": "7.0.2",
+    "vite": "8.3.8",
+    "vitest": "5.1.0"
+  }
+}
